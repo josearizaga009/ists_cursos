@@ -10,7 +10,7 @@
 :root {
     --max-width: 1200px;
     --padding: 50px;
-    --header-height: 90px;
+    --header-height: 64px;
     --box-shadow: 0 2.5px 10px 0 rgba(0, 0, 0, 0.1);
     --radius: 5px;
     --transition: all 0.2s ease;

@@ -48,13 +48,15 @@
     text-decoration: none;
     padding: 10px 0;
     color: var(--color1-txt);
-    background: var(--color4-bg);
+    background: var(--color1-bg);
     border-radius: 3px;
     transition: var(--transition);
     box-shadow: var(--box-shadow);
+    opacity: 0.8;
 }
 
 .curso-item .desc a:hover {
-    background: var(--color1-bg);
+    opacity: 1;
+    transform: scale(1.01);
     transition: var(--transition);
 }
