@@ -1,0 +1,130 @@
+footer {
+    background: var(--color4-bg);
+    color: var(--color1-txt);
+}
+
+/* 
+
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+
+
+*/
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: var(--max-width);
+    height: 100%;
+    margin: auto;
+    padding: 20px;
+}
+
+footer .elements {
+    max-width: var(--max-width);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    height: auto;
+    /*flex: content;*/
+    /* background: black;*/
+}
+
+footer .elements .element {
+    /*display: table-column;*/
+    /*background: blueviolet;*/
+    /*align-items: center;*/
+    /*justify-items: center;*/
+    padding: 0 10px;
+    margin: 5px;
+    height: auto;
+    width: auto;
+    min-height: 150px;
+    margin: auto;
+}
+
+footer .elements .element .logo {
+    display: flex;
+    filter: invert(1) brightness(10);
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    aspect-ratio: 2/1;
+    margin: auto;
+}
+
+footer .elements .element ul li {
+    list-style: none;
+}
+
+footer .elements .element ul li a {
+    text-decoration: none;
+    color: var(--color1-txt);
+    opacity: 0.6;
+    line-height: 1rem;
+    font-size: 0.8rem;
+}
+
+footer .elements .element img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+footer .elements .element h3 {
+    margin: 10px 0;
+    font-size: 1rem;
+}
+
+footer .elements .element .redes a {
+    /*background: red;*/
+    padding: 10px;
+    margin: 5px;
+    border-radius: var(--radius);
+    transition: var(--transition);
+    box-shadow: var(--box-shadow);
+}
+
+footer .elements .element .redes a:hover {
+    background: rgba(0, 0, 0, 0.2);
+    transition: var(--transition);
+}
+
+footer .elements .element .redes a svg {
+    fill: #fff;
+    opacity: 0.6;
+}
+
+footer .otros {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    /*background: blue;*/
+    /*height: 50px;*/
+    font-size: 0.8rem;
+    border-width: 1px;
+    border-color: rgb(93, 107, 118);
+    border-style: solid;
+    border-bottom: 0;
+    border-right: 0;
+    border-left: 0;
+    opacity: 0.6;
+}
+
+/* Adaptacion mobile */
+
+@media (width < 900px) {
+    footer .elements {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (width < 500px) {
+    footer .elements {
+        grid-template-columns: 1fr;
+    }
+}

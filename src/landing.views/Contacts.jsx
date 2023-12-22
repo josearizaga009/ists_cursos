@@ -1,7 +1,7 @@
 export default function Contacts() {
     return (
         <>
-            <main>
+            <div className="banner">
                 Contactos
                 <br />
                 <br />
@@ -103,7 +103,7 @@ export default function Contacts() {
                 <br />
                 <br />
                 <br />
-            </main>
+            </div>
         </>
     );
 }

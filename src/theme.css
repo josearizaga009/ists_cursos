@@ -13,6 +13,9 @@
     --color3-bg: #ffffff;
     --color3-txt: #000000;
 
-    --color4-bg: #292d3e;
+    --color4-bg: #091329;
     --color4-txt: #ffffff;
+
+    --color5-bg: linear-gradient(90deg, #0d1623 30%, #154785 100%);
+    --color5-txt: #ffffff;
 }

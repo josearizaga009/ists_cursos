@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "url": "#",
+        "image_url": "https://learnidea.ideasoft.site/public/img.cursos/1.png",
+        "name": "Fundamentos de Programacion",
+        "description": "Aprende a estructurar y manejar Design Tokens en sistemas de diseño modernos."
+    },
+    {
+        "id": 2,
+        "url": "#",
+        "image_url": "https://learnidea.ideasoft.site/public/img.cursos/1.png",
+        "name": "Fundamentos de Programacion",
+        "description": "Aprende a estructurar y manejar Design Tokens en sistemas de diseño modernos."
+    },
+    {
+        "id": 3,
+        "url": "#",
+        "image_url": "https://learnidea.ideasoft.site/public/img.cursos/1.png",
+        "name": "Fundamentos de Programacion",
+        "description": "Aprende a estructurar y manejar Design Tokens en sistemas de diseño modernos."
+    },
+    {
+        "id": 4,
+        "url": "#",
+        "image_url": "https://learnidea.ideasoft.site/public/img.cursos/1.png",
+        "name": "Fundamentos de Programacion",
+        "description": "Aprende a estructurar y manejar Design Tokens en sistemas de diseño modernos."
+    },
+    {
+        "id": 5,
+        "url": "#",
+        "image_url": "https://learnidea.ideasoft.site/public/img.cursos/1.png",
+        "name": "Fundamentos de Programacion",
+        "description": "Aprende a estructurar y manejar Design Tokens en sistemas de diseño modernos."
+    },
+    {
+        "id": 6,
+        "url": "#",
+        "image_url": "https://learnidea.ideasoft.site/public/img.cursos/1.png",
+        "name": "Fundamentos de Programacion",
+        "description": "Aprende a estructurar y manejar Design Tokens en sistemas de diseño modernos."
+    }
+]

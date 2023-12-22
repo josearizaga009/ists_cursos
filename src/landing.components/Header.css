@@ -7,6 +7,7 @@ header.color-red .menu a {
     color: var(--color1-txt);
 }
 
+header.color-trans .logo,
 header.color-red .logo {
     filter: invert(1) brightness(10);
 }
@@ -17,12 +18,15 @@ header.color-trans {
 
 header.color-trans .btn-burguer svg,
 header.color-trans .menu a {
-    color: var(--color1-bg);
+    color: var(--color3-bg);
 }
 
 header {
-    position: sticky;
+    position: fixed;
+    /* position: sticky; */
     top: 0;
+    width: 100%;
+    z-index: 100;
     height: var(--header-height);
     padding: 0 var(--padding);
 }
