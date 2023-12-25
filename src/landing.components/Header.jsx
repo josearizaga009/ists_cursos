@@ -19,7 +19,7 @@ export default function Header() {
         <header className={color + " " + showMenu}>
             <div className="container">
                 <Link to="/" className="logo">
-                    <img src="./img/logo.png" />
+                    <img src="./img/logo.png" alt="Logo del ISTS" />
                 </Link>
                 <ul className="menu">
                     <MenuItem to="/" name="Inicio" />
