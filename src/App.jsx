@@ -5,18 +5,20 @@ import Home from "./landing.views/Home";
 import Header from "./landing.components/Header";
 import Footer from "./landing.components/Footer";
 import Cursos from "./landing.views/Cursos";
+import Nosotros from "./landing.views/Nosotros";
+import Certificados from "./landing.views/Certificados";
 
 function App() {
     return (
         <Router>
             <Header />
-            <main>
-                <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/contactos" element={<Contacts />} />
-                    <Route path="/cursos" element={<Cursos />} />
-                </Routes>
-            </main>
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/contactos" element={<Contacts />} />
+                <Route path="/cursos" element={<Cursos />} />
+                <Route path="/nosotros" element={<Nosotros />} />
+                <Route path="/certificados" element={<Certificados />} />
+            </Routes>
             <Footer />
         </Router>
     );

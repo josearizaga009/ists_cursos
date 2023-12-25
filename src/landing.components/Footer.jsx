@@ -40,8 +40,10 @@ export default function Footer() {
                         <h3>Enlaces</h3>
                         <ul>
                             <MenuItem to="/" name="Inicio" />
-                            <MenuItem to="/" name="Inicio" />
-                            <MenuItem to="/" name="Inicio" />
+                            <MenuItem to="/cursos" name="Cursos" />
+                            <MenuItem to="/nosotros" name="Nosotros" />
+                            <MenuItem to="/contactos" name="Contactos" />
+                            <MenuItem to="/certificados" name="Certificados" />
                         </ul>
                     </div>
                 </div>

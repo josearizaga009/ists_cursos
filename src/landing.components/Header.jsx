@@ -35,6 +35,8 @@ export default function Header() {
                     </MenuItem>
 
                     <MenuItem to="/contactos" name="Contactos" />
+
+                    <MenuItem to="/certificados" name="Certificados" />
                 </ul>
                 <button className="btn-burguer" onClick={handleShowMenu}>
                     <FontAwesomeIcon icon={faBars} />

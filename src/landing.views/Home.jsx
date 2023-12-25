@@ -3,10 +3,11 @@ import "./Home.css";
 import images from "./../mooks/images.json";
 import CursosList from "./../landing.components/CursosList";
 import cursos from "./../mooks/cursos.json";
+import AnimateElement from "../components/AnimateElement";
 
 export default function Home() {
     return (
-        <>
+        <AnimateElement>
             <section className="banner">
                 <div className="container">
                     <div className="col">
@@ -28,6 +29,6 @@ export default function Home() {
                     title="Algunos de Nuestros Cursos"
                 />
             </section>
-        </>
+        </AnimateElement>
     );
 }

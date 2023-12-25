@@ -1,6 +1,9 @@
+import AnimateElement from "../components/AnimateElement";
+import "./Contacts.css";
+
 export default function Contacts() {
     return (
-        <>
+        <AnimateElement>
             <div className="banner">
                 Contactos
                 <br />
@@ -104,6 +107,6 @@ export default function Contacts() {
                 <br />
                 <br />
             </div>
-        </>
+        </AnimateElement>
     );
 }
