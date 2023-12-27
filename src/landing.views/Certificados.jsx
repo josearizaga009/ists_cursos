@@ -1,5 +1,7 @@
 import "./certificados.css";
 import AnimateElement from "../components/AnimateElement";
+import certificados from "./../mooks/certficados.json";
+import CertificadoItem from "../landing.components/CertificadoItem";
 
 export default function Certificados() {
     return (
@@ -8,7 +10,7 @@ export default function Certificados() {
             <section className="search">
                 <div className="container">
                     <div className="titulo">
-                        <h2>Consulta de certificados</h2>
+                        <h2>CONSULTA DE CERTIFICADOS</h2>
                     </div>
                     <div className="instituciones">
                         <div className="institucion">
@@ -31,6 +33,19 @@ export default function Certificados() {
                     </div>
                     <div className="buscador">
                         <input type="search" placeholder="Buscar" />
+                    </div>
+                </div>
+                <div className="resultado">
+                    <div className="n-result">
+                        <h3>1 Resultado(s) de Curso</h3>
+                    </div>
+                    <div className="items">
+                        {certificados.map((certificado) => (
+                            <CertificadoItem
+                                key={certificado.id}
+                                {...certificado}
+                            />
+                        ))}
                     </div>
                 </div>
             </section>

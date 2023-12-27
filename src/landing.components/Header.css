@@ -47,7 +47,8 @@ header .logo {
     justify-content: center;
     align-items: center;
     height: 100%;
-    aspect-ratio: 2/1;
+    aspect-ratio: 6/2;
+    padding: 8px 0;
 }
 
 header img {

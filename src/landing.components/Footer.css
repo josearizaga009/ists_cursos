@@ -26,7 +26,7 @@ footer .container {
 footer .elements {
     max-width: var(--max-width);
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     height: auto;
     /*flex: content;*/
     /* background: black;*/
@@ -50,9 +50,16 @@ footer .elements .element .logo {
     filter: invert(1) brightness(10);
     justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 100%;
+    max-width: 180px;
     aspect-ratio: 2/1;
     margin: auto;
+}
+
+footer .elements .element ul {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 footer .elements .element ul li {
@@ -64,7 +71,7 @@ footer .elements .element ul li a {
     color: var(--color1-txt);
     opacity: 0.6;
     line-height: 1rem;
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 
 footer .elements .element img {
@@ -102,16 +109,13 @@ footer .otros {
     align-items: center;
     justify-content: center;
     width: 100%;
-    padding: 10px;
+    padding: 20px 10px;
+    padding-top: 30px;
+    margin-top: 30px;
     /*background: blue;*/
     /*height: 50px;*/
-    font-size: 0.8rem;
-    border-width: 1px;
-    border-color: rgb(93, 107, 118);
-    border-style: solid;
-    border-bottom: 0;
-    border-right: 0;
-    border-left: 0;
+    font-size: 1rem;
+    border-top: solid 1px rgb(93, 107, 118);
     opacity: 0.6;
 }
 
