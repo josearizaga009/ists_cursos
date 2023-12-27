@@ -11,6 +11,8 @@
 .nosotros-page .section-concepts,
 .nosotros-page .section-title,
 .nosotros-page .section-team {
+    display: flex;
+    justify-content: center;
     padding: var(--padding);
     width: 100%;
 }
