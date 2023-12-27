@@ -7,9 +7,21 @@ export default function Cursos() {
     return (
         <AnimateElement fade={false}>
             <section className="cursos-page bg-menu"></section>
-            <CursosList cursos={cursos} title="Nuevos" />
-            <CursosList cursos={cursos} title="Mas Vistos" />
-            <CursosList cursos={cursos} title="Antiguos" />
+            <CursosList
+                id="section-proximos"
+                cursos={cursos}
+                title="Próximos"
+            />
+            <CursosList
+                id="section-concluidos"
+                cursos={cursos}
+                title="Concluidos"
+            />
+            <CursosList
+                id="section-en-progreso"
+                cursos={cursos}
+                title="En Progreso"
+            />
         </AnimateElement>
     );
 }

@@ -24,9 +24,21 @@ export default function Header() {
                 <ul className="menu">
                     <MenuItem to="/" name="Inicio" />
                     <MenuItem to="/cursos" name="Cursos">
-                        <MenuItem to="/cursos/proximos" name="Próximos" />
-                        <MenuItem to="/cursos/concluidos" name="Concluidos" />
-                        <MenuItem to="/cursos/en-progreso" name="En progreso" />
+                        <MenuItem
+                            to="/cursos#section-proximos"
+                            name="Próximos"
+                            a_default
+                        />
+                        <MenuItem
+                            to="/cursos#section-concluidos"
+                            name="Concluidos"
+                            a_default
+                        />
+                        <MenuItem
+                            to="/cursos#section-en-progreso"
+                            name="En progreso"
+                            a_default
+                        />
                     </MenuItem>
 
                     <MenuItem to="/nosotros" name="Nosotros">

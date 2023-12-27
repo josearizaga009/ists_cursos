@@ -1,9 +1,9 @@
 import CursoItem from "./CursoItem";
 import "./CursosList.css";
 
-export default function CursosList({ cursos, title }) {
+export default function CursosList({ cursos, title, className = "", id = "" }) {
     return (
-        <section className="cursos-list">
+        <section id={id} className={"cursos-list " + className}>
             <div className="container">
                 <h1>{title}</h1>
                 <div className="cursos">
