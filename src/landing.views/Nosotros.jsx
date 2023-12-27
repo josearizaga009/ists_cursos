@@ -1,10 +1,66 @@
-import AnimateElement from "../components/AnimateElement";
 import "./Nosotros.css";
+import AnimateElement from "../components/AnimateElement";
+import EquipoItem from "../landing.components/EquipoItem";
+import NosotrosSectionTitle from "../landing.components/NosotrosSectionTitle";
+
+import team from "./../mooks/team.json";
 
 export default function Cursos() {
     return (
-        <AnimateElement>
-            <section className="nosotros-page bg-menu"></section>
+        <AnimateElement className="nosotros-page">
+            <section className="section-title">
+                <br />
+                <br />
+                <br />
+                <div className="container">
+                    <NosotrosSectionTitle title="" icon="" description="" />
+                </div>
+            </section>
+
+            <section className="section-team">
+                <div className="container">
+                    {team.map((people) => (
+                        <EquipoItem key={people.id} {...people} />
+                    ))}
+                </div>
+            </section>
+
+            <section className="section-title">
+                <div className="container">
+                    <NosotrosSectionTitle title="" icon="" description="" />
+                </div>
+            </section>
+
+            <section className="section-concepts">
+                <div className="container">
+                    <div className="col">
+                        <h4>MISIÓN</h4>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing
+                            elit. Odio laboriosam sint ullam doloremque optio
+                            recusandae unde at fugiat vitae amet neque suscipit
+                            voluptatibus, consectetur tenetur qui quibusdam!
+                            Architecto corporis eaque in dignissimos numquam
+                            dolorum. Voluptatum modi, minima soluta voluptas
+                            voluptate placeat. Quam laboriosam illo sapiente
+                            soluta, dicta cum maiores culpa!
+                        </p>
+                    </div>
+                    <div className="col">
+                        <h4>VISIÓN</h4>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing
+                            elit. Odio laboriosam sint ullam doloremque optio
+                            recusandae unde at fugiat vitae amet neque suscipit
+                            voluptatibus, consectetur tenetur qui quibusdam!
+                            Architecto corporis eaque in dignissimos numquam
+                            dolorum. Voluptatum modi, minima soluta voluptas
+                            voluptate placeat. Quam laboriosam illo sapiente
+                            soluta, dicta cum maiores culpa!
+                        </p>
+                    </div>
+                </div>
+            </section>
         </AnimateElement>
     );
 }

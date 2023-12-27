@@ -41,10 +41,7 @@ export default function Header() {
                         />
                     </MenuItem>
 
-                    <MenuItem to="/nosotros" name="Nosotros">
-                        <MenuItem to="/nosotros/equipo" name="Equipo" />
-                        <MenuItem to="/nosotros/conceptos" name="Conceptos" />
-                    </MenuItem>
+                    <MenuItem to="/nosotros" name="Nosotros"></MenuItem>
 
                     <MenuItem to="/contactos" name="Contactos" />
 
