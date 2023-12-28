@@ -78,16 +78,16 @@
     border-radius: var(--radius);
     transition: var(--transition);
 }
-.contact-page .section-redes .pdf:hover {
+/* .contact-page .section-redes .pdf:hover {
     background: white;
     transition: var(--transition);
     color: red;
-}
+} */
 
-/* .contact-page .section-redes .pdf svg:hover {
+.contact-page .section-redes .pdf svg:hover {
     color: red;
     transition: var(--transition);
-} */
+}
 
 .contact-page .section-redes .maiz svg:hover {
     color: darkgoldenrod;
