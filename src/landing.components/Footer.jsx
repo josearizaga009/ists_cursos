@@ -52,6 +52,7 @@ export default function Footer() {
                             <MenuItem to="/nosotros" name="Nosotros" />
                             <MenuItem to="/contactos" name="Contactos" />
                             <MenuItem to="/certificados" name="Certificados" />
+                            <MenuItem to="/login" name="Login" a_default />
                         </ul>
                     </div>
                 </div>
