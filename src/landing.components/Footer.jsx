@@ -1,8 +1,12 @@
 import { Link } from "react-router-dom";
 import "./Footer.css";
-import { Facebook } from "../resource/icons";
 import MenuItem from "./MenuItem";
+import SocialNetworkLink from "./SocialNetworkLink";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import instituciones from "./../mooks/instituciones.json";
+
+import redes from "./../mooks/redes-sociales.json";
 
 export default function Footer() {
     return (
@@ -17,23 +21,27 @@ export default function Footer() {
                     <div className="element">
                         <div className="redes">
                             <h3>Redes</h3>
-                            <Link to="/">
-                                <Facebook />
-                            </Link>
-                            <Link to="/">
-                                <Facebook />
-                            </Link>
-                            <Link to="/">
-                                <Facebook />
-                            </Link>
+                            <div className="items">
+                                {redes.map((red) => (
+                                    <SocialNetworkLink key={red.id} {...red} />
+                                ))}
+                            </div>
                         </div>
                     </div>
-                    <div className="element">
+                    <div className="element instituciones">
                         <h3>Instituciones</h3>
                         <ul>
-                            <MenuItem to="/" name="Inicio" />
-                            <MenuItem to="/" name="Inicio" />
-                            <MenuItem to="/" name="Inicio" />
+                            {instituciones.map(({ id, name, url }) => (
+                                <li key={id}>
+                                    <a
+                                        href={url}
+                                        target="_blank"
+                                        rel="noreferrer"
+                                    >
+                                        {name}
+                                    </a>
+                                </li>
+                            ))}
                         </ul>
                     </div>
                     <div className="element">
@@ -48,7 +56,10 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className="otros">
-                    <p>© 2023 Learnidea. Todos los derechos reservados.</p>
+                    <p>
+                        © {new Date().getFullYear()} Ideasoft. Todos los
+                        derechos reservados.
+                    </p>
                 </div>
             </div>
         </footer>

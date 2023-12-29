@@ -1,11 +1,10 @@
 import "./Nosotros.css";
 import AnimateElement from "../components/AnimateElement";
 import EquipoItem from "../landing.components/EquipoItem";
-import NosotrosSectionTitle from "../landing.components/NosotrosSectionTitle";
-import info from "./../mooks/nosotros.json";
 
 import team from "./../mooks/team.json";
-import { faClipboardUser } from "@fortawesome/free-solid-svg-icons";
+import { faHistory, faPeopleGroup } from "@fortawesome/free-solid-svg-icons";
+import SectionTitle from "../landing.components/SectionTitle";
 
 export default function Cursos() {
     return (
@@ -15,13 +14,10 @@ export default function Cursos() {
                 <br />
                 <br />
                 <div className="container">
-                    <NosotrosSectionTitle
-                        title="Nosotros"
-                        icon={faClipboardUser}
-                        description="Nuestro equipo esta conformado por profesionales de
-                    diferentes áreas y con diferentes experiencias, pero con un
-                    objetivo en común: ayudar a las personas a mejorar su
-                    calidad de vida a través de la educación."
+                    <SectionTitle
+                        icon={faPeopleGroup}
+                        title="Nuestro Equipo"
+                        description="Nuestro equipo esta conformado por profesionales de diferentes áreas y con diferentes experiencias, pero con un objetivo en común: ayudar a las personas a mejorar su calidad de vida a través de la educación."
                     />
                 </div>
             </section>
@@ -36,9 +32,11 @@ export default function Cursos() {
 
             <section className="section-title">
                 <div className="container">
-                    {info.map((secs) => (
-                        <NosotrosSectionTitle key={secs.id} {...secs} />
-                    ))}
+                    <SectionTitle
+                        icon={faHistory}
+                        title="Nuestros Conceptos"
+                        description="Somos un equipo altamente capacitado para enseñar aceca de areas en tendencia y de alta demanda."
+                    />
                 </div>
             </section>
 

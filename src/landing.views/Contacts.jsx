@@ -1,14 +1,17 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import AnimateElement from "../components/AnimateElement";
-import NosotrosSectionTitle from "../landing.components/NosotrosSectionTitle";
 import "./Contacts.css";
+import AnimateElement from "../components/AnimateElement";
+import NosotrosSectionTitle from "../landing.components/SectionTitle";
 import {
-    faFilePdf,
     faMessage,
-    faWheatAlt,
+    faNetworkWired,
+    faPaperPlane,
 } from "@fortawesome/free-solid-svg-icons";
+import SectionTitle from "../landing.components/SectionTitle";
 
-import info from "./../mooks/nosotros.json";
+import redes from "./../mooks/redes-sociales.json";
+import SocialNetworkLink from "../landing.components/SocialNetworkLink";
+import InputForm from "../components/InputForm";
+import Button from "../components/Button";
 
 export default function Contacts() {
     return (
@@ -21,7 +24,7 @@ export default function Contacts() {
                     <div className="container">
                         <NosotrosSectionTitle
                             title="Nuestras redes"
-                            icon={faMessage}
+                            icon={faNetworkWired}
                             description="Nuestro equipo esta conformado por profesionales de
                     diferentes áreas y con diferentes experiencias, pero con un
                     objetivo en común: ayudar a las personas a mejorar su
@@ -31,46 +34,45 @@ export default function Contacts() {
                 </section>
                 <section className="section-redes">
                     <div className="container">
-                        <a className="pdf" href="#">
-                            <FontAwesomeIcon icon={faFilePdf} />
-                        </a>
-                        <a className="maiz" href="#">
-                            <FontAwesomeIcon icon={faWheatAlt} />
-                        </a>
+                        {redes.map((red) => (
+                            <SocialNetworkLink key={red.id} {...red} />
+                        ))}
                     </div>
                 </section>
                 <section className="section-title">
                     <div className="container">
-                        {info.map((secs) => (
-                            <NosotrosSectionTitle key={secs.id} {...secs} />
-                        ))}
-                        {/* <NosotrosSectionTitle
-                            title="Nosotros"
-                            icon={faClipboardUser}
-                            description="Nuestro equipo esta conformado por profesionales de
-                    diferentes áreas y con diferentes experiencias, pero con un
-                    objetivo en común: ayudar a las personas a mejorar su
-                    calidad de vida a través de la educación."
-                        /> */}
+                        <SectionTitle
+                            icon={faMessage}
+                            title="Contáctanos"
+                            description="Si tienes alguna pregunta o duda envianos un mensaje."
+                        />
                     </div>
                 </section>
                 <section className="section-form">
                     <div className="container">
                         <form>
-                            <input
-                                type="text"
-                                placeholder="Nombres y Apellidos*"
+                            <InputForm
+                                name="name"
+                                labelText="Nombres y Apellidos"
+                                placeholder="Escribe tus nombres.."
                             />
-                            <input
-                                type="text"
-                                placeholder="Numero de Celular*"
+                            <InputForm
+                                name="phone"
+                                labelText="Numero de Celular"
+                                placeholder="Escribe tu número.."
                             />
-                            <input
-                                type="email"
-                                placeholder="Correo electronico*"
+                            <InputForm
+                                name="email"
+                                labelText="Correo Electrónico"
+                                placeholder="Escribe tu email.."
                             />
-                            <textarea placeholder="Mensaje*" />
-                            <button>Enviar</button>
+                            <InputForm
+                                type="textarea"
+                                name="message"
+                                labelText="Mensaje"
+                                placeholder="Escribe tu mensaje.."
+                            />
+                            <Button text="Enviar" icon={faPaperPlane} />
                         </form>
                     </div>
                 </section>

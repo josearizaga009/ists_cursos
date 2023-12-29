@@ -18,7 +18,7 @@
 
 .contact-page .section-form,
 .contact-page .section-redes {
-    background: var(--color4-bg);
+    background: var(--color3-bg);
 }
 
 .contact-page .section-redes .container,
@@ -66,38 +66,6 @@
     gap: 80px;
     padding: 50px 0;
 }
-.contact-page .section-redes svg {
-    color: var(--color1-txt);
-    font-size: 70px;
-    transition: var(--transition);
-}
-
-.contact-page .section-redes .pdf {
-    padding: 40px;
-    /* background-color: black; */
-    border-radius: var(--radius);
-    transition: var(--transition);
-}
-/* .contact-page .section-redes .pdf:hover {
-    background: white;
-    transition: var(--transition);
-    color: red;
-} */
-
-.contact-page .section-redes .pdf svg:hover {
-    color: red;
-    transition: var(--transition);
-}
-
-.contact-page .section-redes .maiz svg:hover {
-    color: darkgoldenrod;
-    /* background: white; */
-    transition: var(--transition);
-}
-
-.contact-page .section-form {
-    background: var(--color4-bg);
-}
 
 .contact-page .section-form .container {
     flex-direction: column;
@@ -109,41 +77,8 @@
     align-items: center;
     justify-content: center;
     min-width: 300px;
-    max-width: 800px;
+    max-width: 650px;
     /* background: red; */
     width: 100%;
     gap: 20px;
-}
-
-.contact-page .section-form .container input {
-    /* border: solid 1px; */
-    height: 60px;
-    width: 100%;
-    border-radius: var(--radius);
-    padding: 20px 15px;
-    font-size: 1.3rem;
-}
-
-.contact-page .section-form .container textarea {
-    border: solid 1px;
-    border-radius: var(--radius);
-    height: 150px;
-    width: 100%;
-    font-size: 1.3rem;
-    padding: 20px 15px;
-}
-
-.contact-page .section-form .container button {
-    border-radius: var(--radius);
-    font-size: 1.5rem;
-    padding: 10px 100px;
-    background: var(--color1-bg);
-    transition: var(--transition);
-    color: var(--color1-txt);
-    margin: 20px 0;
-}
-
-.contact-page .section-form .container button:hover {
-    opacity: 0.6;
-    transition: var(--transition);
 }

@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "./NosotrosSectionTitle.css";
+import "./SectionTitle.css";
 
-export default function NosotrosSectionTitle({ icon, title, description }) {
+export default function SectionTitle({ icon, title, description }) {
     return (
         <div className="nosotros-item">
             <FontAwesomeIcon icon={icon} />

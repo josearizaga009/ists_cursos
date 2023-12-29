@@ -42,8 +42,11 @@ footer .elements .element {
     margin: 5px;
     height: auto;
     width: auto;
-    min-height: 150px;
     margin: auto;
+}
+
+footer .elements .element ul li a:hover {
+    text-decoration: underline;
 }
 
 footer .elements .element .logo {
@@ -84,25 +87,17 @@ footer .elements .element img {
 footer .elements .element h3 {
     margin: 10px 0;
     font-size: 1rem;
+    margin-bottom: 20px;
 }
 
-footer .elements .element .redes a {
-    /*background: red;*/
-    padding: 10px;
-    margin: 5px;
-    border-radius: var(--radius);
-    transition: var(--transition);
-    box-shadow: var(--box-shadow);
+footer .elements .element .redes .items {
+    display: flex;
+    gap: 10px;
+    margin-left: -15px;
 }
 
-footer .elements .element .redes a:hover {
-    background: rgba(0, 0, 0, 0.2);
-    transition: var(--transition);
-}
-
-footer .elements .element .redes a svg {
-    fill: #fff;
-    opacity: 0.6;
+footer .elements .element .redes a.social-network-link-component {
+    width: 40px;
 }
 
 footer .otros {
@@ -125,11 +120,16 @@ footer .otros {
 @media (width < 900px) {
     footer .elements {
         grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px 10px;
     }
 }
 
 @media (width < 500px) {
     footer .elements {
         grid-template-columns: 1fr;
+    }
+
+    footer .elements .element {
+        width: 100%;
     }
 }
