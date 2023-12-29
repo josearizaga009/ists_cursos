@@ -52,19 +52,18 @@
     font-size: 3rem;
 }
 
-.contact-page .section-title h2 {
-}
-
 .contact-page .section-title p {
     font-size: 1.3rem;
     opacity: 0.6;
 }
 
 .contact-page .section-redes .container {
-    align-items: center;
-    justify-content: center;
-    gap: 80px;
-    padding: 50px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(45px, 1fr));
+    width: 100%;
+    max-width: 500px;
+    gap: 20px;
+    padding: 70px 0;
 }
 
 .contact-page .section-form .container {
