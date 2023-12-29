@@ -1,3 +1,10 @@
+@font-face {
+    src: url("./fonts/Ubuntu-L.ttf");
+    /* src: local("roboto"); */
+    /* font-weight: bold; */
+    font-family: contenido;
+}
+
 * {
     box-sizing: border-box;
     margin: 0px;
