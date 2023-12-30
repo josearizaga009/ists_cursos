@@ -2,6 +2,7 @@ import "./Sidebar.css";
 
 import { faHome, faUsers } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 
 export default function Sidebar() {
     return (
@@ -13,20 +14,20 @@ export default function Sidebar() {
             />
             <span className="user_name">Jose Arizaga</span>
 
-            <a
+            <Link
                 className="option <?= isPageActive($currentPage, 'inicio') ?>"
-                href="./inicio"
+                to="/inicio"
             >
                 <FontAwesomeIcon icon={faHome} />
                 <span>Inicio</span>
-            </a>
+            </Link>
 
             <hr />
 
-            <a className="option" href="#">
+            <Link className="option" to="/users">
                 <FontAwesomeIcon icon={faUsers} />
                 <span>Usuarios</span>
-            </a>
+            </Link>
         </div>
     );
 }
