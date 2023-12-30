@@ -3,7 +3,7 @@ import AnimateElement from "../components/AnimateElement";
 import "./Login.css";
 import { faLock, faUser } from "@fortawesome/free-solid-svg-icons";
 
-export default function Login() {
+export default function Login({ onLogin }) {
     return (
         <AnimateElement className="login-page">
             <form
@@ -33,7 +33,7 @@ export default function Login() {
                     <div className="input msg">
                         <span className="msg"></span>
                     </div>
-                    <div className="input submit">
+                    <div className="input submit" onClick={onLogin}>
                         <input type="submit" value="Iniciar sesion" />
                     </div>
                 </div>
