@@ -5,7 +5,8 @@ import Login from "./views/Login";
 export default function App() {
     const logued = false;
 
-    if (window.location.pathname == "/login") return <Login />;
+    if (window.location.pathname == "/login" && logued == false)
+        return <Login />;
     if (logued) return <RouterPanel />;
     return <RouterLanding />;
 }
