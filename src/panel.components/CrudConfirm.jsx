@@ -21,7 +21,7 @@ export default function CrudConfirm({
             <div className="ideaconfirm">
                 <div className="head">
                     <p className="msg">{text}</p>
-                    <button id="modalClose">
+                    <button id="modalClose" onClick={onClickCancel}>
                         <FontAwesomeIcon icon={faClose} />
                     </button>
                 </div>
