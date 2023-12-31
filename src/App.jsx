@@ -4,7 +4,7 @@ import RouterPanel from "./RouterPanel";
 import Login from "./views/Login";
 
 export default function App() {
-    const [logued, setLogued] = useState(false);
+    const [logued, setLogued] = useState(true);
 
     if (window.location.pathname == "/login" && logued == false)
         return <Login onLogin={() => setLogued(true)} />;

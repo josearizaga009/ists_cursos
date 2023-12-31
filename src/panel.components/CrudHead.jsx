@@ -2,7 +2,7 @@ import "./CrudHead.css";
 import { faCirclePlus } from "@fortawesome/free-solid-svg-icons";
 import Button from "./Button";
 
-export default function CrudHead({ title, isOpen }) {
+export default function CrudHead({ title, isOpen, onClickNew }) {
     return (
         <section
             className={"panel-crudhead-component " + (isOpen ? "open" : "")}
@@ -31,7 +31,12 @@ export default function CrudHead({ title, isOpen }) {
             </div>
             <hr className="d" />
 
-            <Button text="Agregar" icon={faCirclePlus} type="new" />
+            <Button
+                text="Agregar"
+                icon={faCirclePlus}
+                type="new"
+                onClick={onClickNew}
+            />
         </section>
     );
 }

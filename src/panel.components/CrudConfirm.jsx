@@ -8,14 +8,19 @@ import {
     faTrash,
 } from "@fortawesome/free-solid-svg-icons";
 
-export default function CrudConfirm({ isOpen }) {
+export default function CrudConfirm({
+    isOpen,
+    text,
+    onClickDelete,
+    onClickCancel,
+}) {
     return (
         <section
             className={"panel-crudconfirm-component " + (isOpen ? "open" : "")}
         >
             <div className="ideaconfirm">
                 <div className="head">
-                    <p className="msg">¿Esta seguro de eliminar este dato?</p>
+                    <p className="msg">{text}</p>
                     <button id="modalClose">
                         <FontAwesomeIcon icon={faClose} />
                     </button>
@@ -25,8 +30,14 @@ export default function CrudConfirm({ isOpen }) {
                         text="Cancelar"
                         icon={faCircleXmark}
                         type="cancel"
+                        onClick={onClickCancel}
                     />
-                    <Button text="Eliminar" icon={faTrash} type="delete" />
+                    <Button
+                        text="Eliminar"
+                        icon={faTrash}
+                        type="delete"
+                        onClick={onClickDelete}
+                    />
                 </div>
             </div>
         </section>

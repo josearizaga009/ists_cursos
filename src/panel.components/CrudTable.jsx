@@ -1,8 +1,6 @@
 import "./CrudTable.css";
-import { faPen, faTrash } from "@fortawesome/free-solid-svg-icons";
-import Button from "./Button";
 
-export default function CrudTable({ isOpen }) {
+export function CrudTable({ titles, isOpen, dataList, onRowPrint }) {
     return (
         <section
             className={"panel-crudtable-component " + (isOpen ? "open" : "")}
@@ -11,48 +9,39 @@ export default function CrudTable({ isOpen }) {
                 <table border="1">
                     <thead>
                         <tr>
-                            <th>Foto</th>
-                            <th>Nombre</th>
-                            <th>Usuario</th>
-                            <th>Privilegio</th>
+                            {titles.map((title) => (
+                                <th key={title}>{title}</th>
+                            ))}
                             <th>Acción</th>
                         </tr>
                     </thead>
-                    <tbody id="tableData">
-                        <tr>
-                            <td>
-                                <img
-                                    src="https://randomuser.me/api/portraits/men/30.jpg"
-                                    className="td-photo"
-                                />
-                            </td>
-                            <td>
-                                <span className="td-span">Jose</span>
-                            </td>
-                            <td>
-                                <span className="td-span">josearizaga009</span>
-                            </td>
-                            <td>
-                                <span className="td-span">Docente</span>
-                            </td>
-                            <td className="td-action">
-                                <div className="buttons-flex">
-                                    <Button
-                                        text="Editar"
-                                        icon={faPen}
-                                        type="edit"
-                                    />
-                                    <Button
-                                        text="Borrar"
-                                        icon={faTrash}
-                                        type="delete"
-                                    />
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
+                    <tbody>{dataList.map((row) => onRowPrint(row))}</tbody>
                 </table>
             </div>
         </section>
+    );
+}
+
+export function CrudTableTdText({ value }) {
+    return (
+        <td>
+            <span className="td-span">{value}</span>
+        </td>
+    );
+}
+
+export function CrudTableTdImage({ src, alt }) {
+    return (
+        <td>
+            <img src={src} className="td-photo" alt={alt} />
+        </td>
+    );
+}
+
+export function CrudTableTdFlex({ children }) {
+    return (
+        <td className="td-action">
+            <div className="buttons-flex">{children}</div>
+        </td>
     );
 }
