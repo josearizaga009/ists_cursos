@@ -6,6 +6,7 @@ import Footer from "./landing.components/Footer";
 import Cursos from "./landing.views/Cursos";
 import Nosotros from "./landing.views/Nosotros";
 import Certificados from "./landing.views/Certificados";
+import NotFound from "./views/NotFound";
 
 export default function RouterLanding() {
     return (
@@ -17,6 +18,7 @@ export default function RouterLanding() {
                 <Route path="/cursos" element={<Cursos />} />
                 <Route path="/nosotros" element={<Nosotros />} />
                 <Route path="/certificados" element={<Certificados />} />
+                <Route path="*" element={<NotFound />} />
             </Routes>
             <Footer />
         </Router>
