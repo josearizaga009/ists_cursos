@@ -7,11 +7,11 @@ export default function CursosList({ cursos, title, className = "", id = "" }) {
             <div className="container">
                 <h1>{title}</h1>
                 <div className="cursos">
-                    {cursos.map(({ id, url, image_url, description, name }) => (
+                    {cursos.map(({ id, image, description, name }) => (
                         <CursoItem
                             key={id}
-                            to={url}
-                            imagen={image_url}
+                            to={"/curso/" + id}
+                            imagen={image}
                             name={name}
                             description={description}
                         />

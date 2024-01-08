@@ -2,11 +2,19 @@ import "./Nosotros.css";
 import AnimateElement from "../components/AnimateElement";
 import EquipoItem from "../landing.components/EquipoItem";
 
-import team from "./../mooks/team.json";
+// import team from "./../mooks/team.json";
 import { faHistory, faPeopleGroup } from "@fortawesome/free-solid-svg-icons";
 import SectionTitle from "../landing.components/SectionTitle";
+import { getUsers } from "../services/users";
+import { useEffect, useState } from "react";
 
 export default function Cursos() {
+    const [users, setUsers] = useState([]);
+
+    useEffect(() => {
+        getUsers().then((res) => setUsers(res));
+    }, []);
+
     return (
         <AnimateElement className="nosotros-page">
             <section className="section-title">
@@ -24,7 +32,7 @@ export default function Cursos() {
 
             <section className="section-team">
                 <div className="container">
-                    {team.map((people) => (
+                    {users.map((people) => (
                         <EquipoItem key={people.id} {...people} />
                     ))}
                 </div>

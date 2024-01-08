@@ -2,13 +2,11 @@ import { Link } from "react-router-dom";
 import "./Footer.css";
 import MenuItem from "./MenuItem";
 import SocialNetworkLink from "./SocialNetworkLink";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 import instituciones from "./../mooks/instituciones.json";
 
-import redes from "./../mooks/redes-sociales.json";
+// import redes from "./../mooks/redes-sociales.json";
 
-export default function Footer() {
+export default function Footer({ socials = [] }) {
     return (
         <footer>
             <div className="container">
@@ -22,7 +20,7 @@ export default function Footer() {
                         <div className="redes">
                             <h3>Redes</h3>
                             <div className="items">
-                                {redes.map((red) => (
+                                {socials.map((red) => (
                                     <SocialNetworkLink key={red.id} {...red} />
                                 ))}
                             </div>

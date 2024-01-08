@@ -2,6 +2,8 @@ import "./certificados.css";
 import AnimateElement from "../components/AnimateElement";
 import certificados from "./../mooks/certficados.json";
 import CertificadoItem from "../landing.components/CertificadoItem";
+// import { useEffect, useState } from "react";
+// import { getCertificates } from "../services/certificates";
 
 export default function Certificados() {
     return (

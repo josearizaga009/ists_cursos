@@ -22,10 +22,7 @@ export default function Sidebar() {
             />
             <span className="user_name">Jose Arizaga</span>
 
-            <Link
-                className="option <?= isPageActive($currentPage, 'inicio') ?>"
-                to="/inicio"
-            >
+            <Link className="option" to="/">
                 <FontAwesomeIcon icon={faHome} />
                 <span>Inicio</span>
             </Link>

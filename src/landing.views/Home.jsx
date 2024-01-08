@@ -1,11 +1,21 @@
 import Slider from "../landing.components/Slider";
 import "./Home.css";
-import images from "./../mooks/images.json";
+// import images from "./../mooks/images.json";
 import CursosList from "./../landing.components/CursosList";
-import cursos from "./../mooks/cursos.json";
+// import cursos from "./../mooks/cursos.json";
 import AnimateElement from "../components/AnimateElement";
+import { useEffect, useState } from "react";
+import { getCourses } from "../services/courses";
+import { getImages } from "../services/images";
 
 export default function Home() {
+    const [courses, setCourses] = useState([]);
+    const [images, setImages] = useState([]);
+
+    useEffect(() => {
+        getCourses().then((res) => setCourses(res));
+        getImages().then((res) => setImages(res));
+    }, []);
     return (
         <AnimateElement>
             <section className="banner">
@@ -25,7 +35,7 @@ export default function Home() {
 
             <section className="home-page section-cursos">
                 <CursosList
-                    cursos={cursos}
+                    cursos={courses}
                     title="Algunos de Nuestros Cursos"
                 />
             </section>

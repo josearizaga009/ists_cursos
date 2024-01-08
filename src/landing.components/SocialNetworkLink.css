@@ -1,5 +1,7 @@
 a.social-network-link-component {
     display: flex;
+    justify-content: center;
+    align-items: center;
     width: 50px;
     padding: 10px;
     border-radius: var(--radius);
@@ -14,8 +16,9 @@ a.social-network-link-component:hover {
 
 a.social-network-link-component .container-icon {
     display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    display: flex;
     aspect-ratio: 1/1;
 }
 

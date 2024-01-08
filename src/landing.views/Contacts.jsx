@@ -8,12 +8,12 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import SectionTitle from "../landing.components/SectionTitle";
 
-import redes from "./../mooks/redes-sociales.json";
+// import redes from "./../mooks/redes-sociales.json";
 import SocialNetworkLink from "../landing.components/SocialNetworkLink";
 import InputForm from "../components/InputForm";
 import Button from "../components/Button";
 
-export default function Contacts() {
+export default function Contacts({ socials = [] }) {
     return (
         <AnimateElement>
             <div className="contact-page">
@@ -34,7 +34,7 @@ export default function Contacts() {
                 </section>
                 <section className="section-redes">
                     <div className="container">
-                        {redes.map((red) => (
+                        {socials.map((red) => (
                             <SocialNetworkLink key={red.id} {...red} />
                         ))}
                     </div>
